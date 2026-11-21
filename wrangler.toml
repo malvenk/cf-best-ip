@@ -19,16 +19,11 @@ crons = ["15 */6 * * *"]
 # 非敏感变量(public,可见即可)
 [vars]
 CF_ZONE_ID        = "6191f43f56c6f14ddbf97f61e26fec81"
-SERVICE_HOSTNAME  = "bestip.dek.pp.ua
-" # Worker 管理页 / API 入口，不参与优选 IP DNS 同步
-ROOT_DOMAIN       = "dek.pp.ua
-"        # 显式限制 DNS 同步根域，避免误写到其它 zone
-ALLOWED_HOSTS     = "bestip.dek.pp.ua
-" # 页面/API 入口 host 白名单；/health 仍允许监控访问
-AUTO_RECORD_NAME  = "auto.dek.pp.ua
-"   # 默认推荐优选池
-CF_RECORD_NAME    = "cf.dek.pp.ua
-"     # 通用优选池
+SERVICE_HOSTNAME  = "bestip.dek.pp.ua" # Worker 管理页 / API 入口，不参与优选 IP DNS 同步
+ROOT_DOMAIN       = "dek.pp.ua"        # 显式限制 DNS 同步根域，避免误写到其它 zone
+ALLOWED_HOSTS     = "bestip.dek.pp.ua" # 页面/API 入口 host 白名单；/health 仍允许监控访问
+AUTO_RECORD_NAME  = "auto.dek.pp.ua"   # 默认推荐优选池
+CF_RECORD_NAME    = "cf.dek.pp.ua"     # 通用优选池
 CF_DNS_BY_CARRIER = "1"   # "1" = 按运营商分子域同步 (ct./cu./cm.)
 CF_DNS_IPV6       = "0"   # "1" = 同步 AAAA 记录；默认关闭，避免客户端兼容性突变
 DNS_TOP_N         = "10"
